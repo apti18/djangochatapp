@@ -1,0 +1,55 @@
+body{
+    background-color: #83c5be;
+}
+.roomListRoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Optional if you want to center text */
+    margin-bottom: 20px; /* Optional margin between room items */
+  }
+  
+  .roomListRoom__header,
+  .roomListRoom__content,
+  .roomListRoom__meta {
+    width: 100%; /* Ensure child elements take full width */
+    text-align: center; /* Center align content within each section */
+  }
+  
+  .roomListRoom__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Optional margin between header and content */
+  }
+  
+  .roomListRoom__header .roomListRoom__author {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove default underline from links */
+    color: #333; /* Optional: Set desired text color */
+  }
+  
+  .roomListRoom__header .roomListRoom__author span {
+    margin-left: 5px; /* Optional spacing between avatar and username */
+  }
+  
+  .roomListRoom__content a {
+    text-decoration: none; /* Remove default underline from links */
+    color: #007bff; /* Optional: Set desired link color */
+  }
+  
+  .roomListRoom__meta {
+    margin-top: 10px; /* Optional margin between content and meta */
+  }
+  
+  .roomListRoom__joined {
+    text-decoration: none; /* Remove default underline from links */
+    color: #666; /* Optional: Set desired text color */
+  }
+  
+  .roomListRoom__topic {
+    color: #999; /* Optional: Set desired text color */
+  }
+  
