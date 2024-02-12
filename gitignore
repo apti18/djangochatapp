@@ -2,3 +2,4 @@ models.py
 admin.py
 views.py
 urls.py
+settings.py
