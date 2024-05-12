@@ -15,8 +15,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
-import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,7 +30,7 @@ SECRET_KEY = 'django-insecure-qmi1d@ing$32je&yl^hf5=rvbgif&k(yssrd23i6#s2=eyd^&y
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*'
+    '.vercel.app'
 ]
 
 
@@ -150,4 +149,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
-django_heroku.settings(locals())
