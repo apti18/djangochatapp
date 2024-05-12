@@ -1,6 +1,8 @@
 body{
     background-color: #83c5be;
 }
+
+
 .roomListRoom {
     display: flex;
     flex-direction: column;
@@ -53,3 +55,11 @@ body{
     color: #999; /* Optional: Set desired text color */
   }
   
+
+.link-to-vc{
+  display: inline;
+ 
+  margin-right: 900px;
+}
+
+

@@ -1,9 +1,4 @@
-import dj-database-url
-import os
 
-DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("postgres://db1_ht0n_user:2GUrUD9MuYEFfvPqsOrvFu1Fq3vVBPge@dpg-cn52c60l5elc73cue010-a.oregon-postgres.render.com/db1_ht0n"))
-}
 
 """
 
@@ -19,7 +14,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
+import django_heroku
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -34,9 +31,7 @@ SECRET_KEY = 'django-insecure-qmi1d@ing$32je&yl^hf5=rvbgif&k(yssrd23i6#s2=eyd^&y
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '100.0.0.1',
-    'db1db.render.com'
+    '*'
 ]
 
 
@@ -49,12 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'rest_framework',
     'base.apps.BaseConfig',
-    
-     'rest_framework',
-     
-     'corsheaders'
+    'corsheaders',
+
 ]
 
 AUTH_USER_MODEL = 'base.User'
@@ -97,7 +90,7 @@ WSGI_APPLICATION = 'bigfirst.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+#change here for the database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -157,3 +150,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+django_heroku.settings(locals())
